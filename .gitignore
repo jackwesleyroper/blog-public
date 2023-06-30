@@ -1,0 +1,9 @@
+**/.tfstate*
+**/.out
+**/.json
+**/.plan
+**/*.plan
+**/.terraform
+**/plan.out.json
+*.terraform.lock.hcl
+/.vs
