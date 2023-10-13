@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "azure_region_policy": {
+      "severity": "HIGH",
+      "message": "Azure resources should be deployed in 'UK South' or 'UK West' regions.",
+      "rules_file": "azure_region_policy.rego"
+    }
+  }
+}

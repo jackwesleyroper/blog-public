@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: argocd
+spec:
+  securityContext:
+    runAsNonRoot: true
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: nginx
+  source:
+    repoURL: https://github.com/yourusername/nginx-app.git
+    path: ./nginx
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - Validate=false
