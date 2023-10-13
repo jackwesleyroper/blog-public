@@ -1,14 +1,11 @@
 variable "json_input" {
-  description = "Path to the JSON input file"
+  description = "JSON input"
   type        = string
-}
-
-data "external" "json_data" {
-  program = ["cat", var.json_input]
+  default     = ""
 }
 
 locals {
-  input_data = jsondecode(data.external.json_data.result)
+  input_data = jsondecode(var.json_input)
 }
 
 output "name" {

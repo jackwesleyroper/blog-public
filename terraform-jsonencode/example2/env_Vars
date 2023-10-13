@@ -1,0 +1,1 @@
+export TF_VAR_json_input='{"name": "Yoda", "age": 900, "city": "Dagobah System"}'
